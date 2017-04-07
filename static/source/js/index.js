@@ -1,5 +1,5 @@
 function pageLoad(){
-  alert('page loaded!');
-};
+  alert('page loaded!')
+}
 
-window.onload = pageLoad;
+window.onload = pageLoad
