@@ -1,7 +1,7 @@
 var express = require('express')
   , logger = require('morgan')
   , app = express()
-  , path = __dirname + "/static/source/templates/"
+  , path = __dirname + "/static/source/html/"
 
 var router = express.Router()
 
