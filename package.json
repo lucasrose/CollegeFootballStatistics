@@ -1,0 +1,32 @@
+{
+  "name": "cfb-network-website",
+  "version": "1.0.0",
+  "description": "College Football Playoff ranking based on a network model",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "stylus source/styles/*.styl -o static/source/css",
+    "watch-css": "stylus source/styles/*.styl -o static/source/css -w",
+    "build-watch-pug": "pug source/templates/*pug -P -o static/source/templates -w",
+    "clean-css": "rm -rf source/static/css && mkdir -p static/source/css",
+    "clean-html":"rm -rf source/static/templates && mkdir -p static/source/templates",
+    "build": "npm run clean-css && npm run build-css",
+    "watch": "npm run clean-css && npm run watch-css & npm run clean-html & npm run build-watch-pug & nodemon index.js -e js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasrose/cfb-network-site-2017.git"
+  },
+  "author": "Lucas Rose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucasrose/cfb-network-site-2017/issues"
+  },
+  "homepage": "https://github.com/lucasrose/cfb-network-site-2017#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "morgan": "^1.8.1",
+    "nodemon": "^1.11.0",
+    "pug": "^2.0.0-beta11"
+  }
+}
