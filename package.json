@@ -4,11 +4,7 @@
   "description": "College Football Playoff ranking based on a network model",
   "main": "index.js",
   "scripts": {
-    "build-css": "stylus source/styles/*.styl -o static/source/css",
-    "watch-css": "stylus source/styles/*.styl -o static/source/css -w",
-    "clean-css": "rm -rf source/static/css && mkdir -p static/source/css",
-    "build": "npm run clean-css && npm run build-css",
-    "watch": "npm run clean-css && npm run watch-css & nodemon index.js -e js",
+    "watch": "nodemon index.js -e js",
     "start": "node index.js"
   },
   "repository": {
