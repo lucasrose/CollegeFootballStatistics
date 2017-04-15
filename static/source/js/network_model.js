@@ -42,12 +42,12 @@ $(document).ready(function(){
 //}
 
 function getRankings2012(){
-  loadFile("http://34.208.59.48:8000/api/rankings/2012", showJSON, "Rankings_2012\n")
+  loadFile("http://34.208.59.48:8000/api/rankings/2012", getResults, "Rankings_2012\n")
 }
 
-function showJSON(json){
+function getResults(json){
   //var parsedJSON = JSON.parse(json)
-  alert(json + this.responseText)
+  return (json + this.responseText)
 }
 
 function xhrSuccess () { this.callback.apply(this, this.arguments) }
