@@ -1,7 +1,8 @@
 //append table information
 $(document).ready(function(){
-//  var html = setupTables
-//  $("#inner").append(html)
+  for(var i = 0; i < 25; i++){
+      insertTeam()
+  }
 })
 
 ////pass sorted array of leagues
@@ -40,6 +41,14 @@ $(document).ready(function(){
 //             
 //  return html
 //}
+
+function insertTeam(){
+  var html = "<li class='team'>" +
+             "<div><a href='team_1' ><img " +            "src='http://maxpreps.cbsistatic.com/includes/images/signing_day/logos/site/virginia_tech.png'></a>" +
+             "</div></li>"
+  $("#inner").append(html)
+}
+
 
 function getRankings2012(){
   loadFile("http://34.208.59.48:8000/api/rankings/2012", getResults, "Rankings_2012\n")

@@ -1,0 +1,20 @@
+#table-wrapper {
+  margin: 0 49.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+.team {
+  border-radius:100%;
+  width: 12.5em;
+  height: 10em;
+  background: #ccc;
+  border: 3px solid #000;
+  margin: inherit
+}
+
+.team > div > a {
+  margin: 0 1.5em;
+}
