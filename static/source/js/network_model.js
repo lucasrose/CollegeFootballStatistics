@@ -8,6 +8,7 @@ function insertTeam(team){
   var html = "<li class='team'>" +
              "<div><a href='" + team + "' ><img " +            "src='http://maxpreps.cbsistatic.com/includes/images/signing_day/logos/site/virginia_tech.png'></a>" +
              "</div></li>"
+  
   $("#inner").append(html)
 }
 
@@ -32,9 +33,7 @@ function parseResults(data){
     var rank = i.toString()
     var teamData = rankings[rank]
     insertTeam(teamData["college"])
-    
   }
-  
 }
 
 function xhrSuccess () { this.callback.apply(this, this.arguments) }
