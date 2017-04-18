@@ -17,10 +17,24 @@ function getRankings2015(){
 
 function getResults(){
   var json = this.response
-  var CFB25 = json["0"]
-  var AP25 = json["1"]
   
-  alert(CFB25.type)
+  parseResults(json["0"])
+  //parseResults(json["1"])
+}
+
+function parseResults(data){
+  var type = data["type"]
+  var week = data["week"]
+  
+  var rankings = data["ranking"]
+
+  for (var i = 1; i <= 25; i++){
+    var rank = i.toString()
+    var teamData = rankings[rank]
+    insertTeam(teamData["college"])
+    
+  }
+  
 }
 
 function xhrSuccess () { this.callback.apply(this, this.arguments) }
