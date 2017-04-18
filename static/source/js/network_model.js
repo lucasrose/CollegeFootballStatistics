@@ -1,4 +1,32 @@
 //append table information
+var images = {
+  "Clemson": 1,
+  "Alabama": 73,
+  "Michigan State": 30,
+  "Oklahoma": 24,
+  "Iowa": 28,
+  "Ohio State": 19,
+  "Notre Dame": 104,
+  "Florida State": 3,
+  "North Carolina": 6,
+  "TCU": 85,
+  "Ole Miss": 77,
+  "Northwestern": 32,
+  "Michigan": 29,
+  "Oregon": 60,
+  "Oklahoma State": 25,
+  "Baylor": 79,
+  "Houston": 80,
+  "Florida": 67,
+  "LSU": 76,
+  "Navy": 102,
+  "Utah": 94,
+  "Tennessee": 71,
+  "Temple": 15,
+  "USC": 62,
+  "Stanford": 63
+}
+
 $(document).ready(function(){
   getRankings2015()
   
@@ -6,9 +34,9 @@ $(document).ready(function(){
 
 function insertTeam(team){
   var html = "<li class='team'>" +
-             "<div><a href='" + team + "' ><img " +            "src='http://maxpreps.cbsistatic.com/includes/images/signing_day/logos/site/virginia_tech.png'></a>" +
-             "</div></li>"
-  
+             "<div class='team-logo'><a href='" + team + "' ><img " + "src='../../assets/logos/" +
+             images[team].toString() + ".png'</a>" + "</div class='team-content'><div>" + team +"</div></li>"
+  //append invisible content on hover here
   $("#inner").append(html)
 }
 
