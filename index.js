@@ -20,7 +20,7 @@ app.get('/network_model', function (req, res, next) {
 })
 
 app.get('/teams', function (req, res, next) {
-  res.sendFile(path + "teams.html")
+  res.redirect("http://www.foxsports.com/college-football/teams")
 })
 
 app.get('/about_us', function (req, res, next) {

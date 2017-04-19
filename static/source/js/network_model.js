@@ -27,17 +27,56 @@ var images = {
   "Stanford": 63
 }
 
+var mascots = {
+  "Clemson": "Tigers",
+  "Alabama": "Crimson Tide",
+  "Michigan State": "Spartans",
+  "Oklahoma": "Sooners",
+  "Iowa": "Hawkeyes",
+  "Ohio State": "Buckeyes",
+  "Notre Dame": "Fighting Irish",
+  "Florida State": "Seminoles",
+  "North Carolina": "Tar Heels",
+  "TCU": "Horned Frogs",
+  "Ole Miss": "Rebels",
+  "Northwestern": "Wildcats",
+  "Michigan": "Wolverines",
+  "Oregon": "Ducks",
+  "Oklahoma State": "Cowboys",
+  "Baylor": "Bears",
+  "Houston": "Cougars",
+  "Florida": "Gators",
+  "LSU": "Tigers",
+  "Navy": "Midshipmen",
+  "Utah": "Utes",
+  "Tennessee": "Volunteers",
+  "Temple": "Owls",
+  "USC": "Trojans",
+  "Stanford": "Cardinal"
+}
+
 $(document).ready(function(){
   getRankings2015()
   
 })
 
 function insertTeam(rank, team){
-  var html = "<li class='team'><div class='rank'>" + rank +"</div><a href='team'><div class='team-logo'>" +
+  var html = "<li class='team'><div class='rank'>" + rank +"</div><a href='" + getTeamReference(team) + 
+             "'><div class='team-logo'>" +
              "<img src='../../assets/logos/" + images[team].toString() + ".png'/>" + 
              "</div><div class='team-content'>" + team.toUpperCase() + "</div></a></li>"
   //append invisible content on hover here
   $("#inner").append(html)
+}
+
+function getTeamReference(team){
+  var link = "http://www.foxsports.com/college-football/"
+  link += team
+  link += "-"
+  link += mascots[team]
+  link += "-team"
+
+  return link.replace(" ", "-").toLowerCase()
 }
 
 function getRankings2015(){
