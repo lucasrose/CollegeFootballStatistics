@@ -32,10 +32,10 @@ $(document).ready(function(){
   
 })
 
-function insertTeam(team){
-  var html = "<li class='team'>" +
-             "<div class='team-logo'><a href='" + team + "' ><img " + "src='../../assets/logos/" +
-             images[team].toString() + ".png'</a>" + "</div class='team-content'><div>" + team +"</div></li>"
+function insertTeam(rank, team){
+  var html = "<li class='team'><div class='rank'>" + rank +"</div><a href='team'><div class='team-logo'>" +
+             "<img src='../../assets/logos/" + images[team].toString() + ".png'/>" + 
+             "</div><div class='team-content'>" + team.toUpperCase() + "</div></a></li>"
   //append invisible content on hover here
   $("#inner").append(html)
 }
@@ -60,7 +60,7 @@ function parseResults(data){
   for (var i = 1; i <= 25; i++){
     var rank = i.toString()
     var teamData = rankings[rank]
-    insertTeam(teamData["college"])
+    insertTeam(i, teamData["college"])
   }
 }
 

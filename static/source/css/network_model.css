@@ -11,12 +11,8 @@ ul {
   height: 10em;
 }
 
-div#inner {
-  border: .25em solid black;
-}
-
 li.team {
-  border: .25em solid black;
+  border-bottom: .05em solid black;
 }
 
 .team-logo {
@@ -26,15 +22,27 @@ li.team {
 }
 
 .team-content {
-  margin-left: 10em;
-  float: right;
+  margin-top: 1.8em;
+  margin-left: 3em;
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+  font-size: 2em;
+  color: black;
+  float: left;
+  display: inline-block;
+}
+
+.rank {
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+  font-size: 2em;
+  float: left;
   display: inline-block;
 }
 
 #top-25-title {
-  margin-left: 3em;
+  margin-left: .6em;
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+	 font-size: 4em;
 }
-
 
 img {
   max-width:100%;
