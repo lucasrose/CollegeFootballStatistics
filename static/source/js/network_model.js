@@ -62,7 +62,7 @@ $(document).ready(function(){
 function insertTeam(rank, team){
   var html = "<li class='team'><div class='rank'>" + rank +"</div><a href='" + getTeamReference(team) + 
              "'><div class='team-logo'>" +
-             "<img src='../../assets/logos/" + images[team].toString() + ".png'/>" + 
+             "<img src='http://b.fssta.com/uploads/content/dam/fsdigital/fscom/global/dev/static_resources/ncaaf/teams/retina/" + images[team].toString() + ".png'/>" + 
              "</div><div class='team-name'>" + team.toUpperCase() + "</div>" +
              "<div class='team-mascot'>"+ mascots[team].toUpperCase() +"</div></a></li>"
   $("#inner").append(html)
