@@ -56,8 +56,7 @@ var mascots = {
 }
 
 $(document).ready(function(){
-  getRankings2015()
-  
+  getLatestRankings("http://34.208.59.48:8000/api/our-rankings/2015/")
 })
 
 function insertTeam(rank, team){
@@ -66,8 +65,13 @@ function insertTeam(rank, team){
              "<img src='../../assets/logos/" + images[team].toString() + ".png'/>" + 
              "</div><div class='team-name'>" + team.toUpperCase() + "</div>" +
              "<div class='team-mascot'>"+ mascots[team].toUpperCase() +"</div></a></li>"
-  //append invisible content on hover here
   $("#inner").append(html)
+}
+
+function insertWeek(week){
+  var currentWeek = "WEEK " + week.toString()
+  var html = "<div id='week-number'>" + currentWeek + "</div>"
+  $("#week-number").append(html)
 }
 
 function getTeamReference(team){
@@ -80,8 +84,8 @@ function getTeamReference(team){
   return link.replace(" ", "-").toLowerCase()
 }
 
-function getRankings2015(){
-  loadFile("http://34.208.59.48:8000/api/our-rankings/2015/", getResults)
+function getLatestRankings(url){
+  loadFile(url, getResults)
 }
 
 function getResults(){
@@ -95,6 +99,7 @@ function parseResults(data){
   var type = data["type"]
   var week = data["week"]
   
+  insertWeek(week)
   var rankings = data["ranking"]
 
   for (var i = 1; i <= 25; i++){

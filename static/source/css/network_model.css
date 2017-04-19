@@ -52,6 +52,14 @@ li.team {
   margin-left: .6em;
   font-family: Abel,Helvetica Neue,Arial,sans-serif;
 	 font-size: 4em;
+  display: inline-block;
+}
+
+#week-number {
+  margin-left: .6em;
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+	 font-size: 1.5em;
+  display: inline-block;
 }
 
 img {
