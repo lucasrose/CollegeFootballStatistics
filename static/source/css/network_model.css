@@ -21,7 +21,7 @@ li.team {
   display: inline-block;
 }
 
-.team-content {
+.team-name {
   margin-top: 1.8em;
   margin-left: 3em;
   font-family: Abel,Helvetica Neue,Arial,sans-serif;
@@ -30,6 +30,18 @@ li.team {
   float: left;
   display: inline-block;
 }
+
+.team-mascot {
+  margin-top: 2.8em;
+  margin-left: 1em;
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+  font-size: 1.5em;
+  color: black;
+  float: left;
+  display: inline-block;
+}
+
+
 
 .rank {
   font-family: Abel,Helvetica Neue,Arial,sans-serif;
