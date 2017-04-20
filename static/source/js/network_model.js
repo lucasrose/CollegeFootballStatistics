@@ -88,6 +88,12 @@ function getLatestRankings(url){
   loadFile(url, getResults)
 }
 
+function updateRankings(url){
+  $("#inner").empty()
+  $("#week-number").empty()
+  getLatestRankings(url)
+}
+
 function getResults(){
   var json = this.response
   
