@@ -98,7 +98,6 @@ function getResults(){
   var json = this.response
   
   parseResults(json["0"])
-  //parseResults(json["1"])
 }
 
 function parseResults(data){

@@ -1,8 +1,8 @@
 body {
-  font: 12px/1.4 "Lucida Grande", Arial, sans-serif;
   background: #000;
   color: #ffa;
 }
+
 #about-us {
   float: right;
 }
@@ -10,6 +10,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: Abel,Helvetica Neue,Arial,sans-serif;
 }
-p, div {
+
+body, p, div, .nav, .page-title, .page-content {
     font-family: Abel,Helvetica Neue,Arial,sans-serif;
 }

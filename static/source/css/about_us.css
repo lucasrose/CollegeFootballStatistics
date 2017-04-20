@@ -1,0 +1,36 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: Abel,Helvetica Neue,Arial,sans-serif;
+}
+body, p, div, .nav, .page-title, .page-sub-header, .page-content{
+  font-family: Abel,Helvetica Neue,Arial,sans-serif;
+}
+
+.page-title {
+  margin-left: .6em;
+  font-size: 4em;
+  float: left;
+  display: inline-block;
+}
+
+.page-sub-header {
+  padding-top: 3em;
+  margin-left: 1.1em;
+  border-bottom: .01em solid black;
+}
+
+.page-content {
+  margin-left: 2.5em;
+  display: inline-block;
+}
+
+.major {
+  margin-left: 1.3em;
+  font-size: .5em;
+  display: inline-block;
+}
+
+.bio {
+  font-size: 1.5em;
+  margin-left: 1.5em;
+  padding-top: 1em;
+}
