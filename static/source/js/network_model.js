@@ -114,7 +114,7 @@ var weekToJSONMap = {
   "14": "11"
 }
 
-var latestRankingEndpoint = "//34.208.59.48:8000/api/our-rankings/2016/"
+var latestRankingEndpoint = "http://34.208.59.48:8000/api/our-rankings/2016/"
 
 $(document).ready(function(){
   getLatestRankings(latestRankingEndpoint, "11")
