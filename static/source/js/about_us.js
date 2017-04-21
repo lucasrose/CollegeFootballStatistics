@@ -24,7 +24,7 @@ function addLucas(){
   var linkedInUrl = "https://www.linkedin.com/in/lucasrose7"
   var gitHubUrl = "https://github.com/lucasrose"
   var gitHubHTMLString = "<a class='github-link' href='" + gitHubUrl + "'>GitHub</a>"
-  var bio = "Lucas is an incoming Software Developer at GE Digital, in San Francisco, California. Last summer he interned at Rackspace as a Software Developer, working primarily on frontend code, utilizing the React JS Framework. Sophomore year, Lucas worked part time and interned at Qualtrax, again doing frontend software developement. At both companies as side work he created mobile/desktop applications (Rackspace - Mac App, Qualtrax - Android/Web App). He likes working out, playing soccer and traveling."
+  var bio = "Lucas is an incoming Software Developer at GE Digital, in San Francisco, California. Last summer he interned at Rackspace as a Software Developer, working primarily on frontend code, utilizing the React JS Framework. Sophomore year, Lucas worked part time and interned at Qualtrax, again doing frontend software developement. At both companies as side work he created mobile/desktop applications (Rackspace - Mac App, Qualtrax - Android/Web App). He likes to work out, play soccer, take photos, and travel."
   
   createPerson(name, major, bio, linkedInUrl, gitHubHTMLString)
 }

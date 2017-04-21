@@ -24,7 +24,29 @@ var images = {
   "Tennessee": 71,
   "Temple": 15,
   "USC": 62,
-  "Stanford": 63
+  "Stanford": 63,
+  "Mississippi": 77,
+  "Texas Christian": 85,
+  "Louisiana State": 76,
+  "Southern California": 62,
+  "Wisconsin": 36,
+  "Toledo": 55,
+  "Mississippi State": 78,
+  "Ucla": 64,
+  "Washington State": 66,
+  "Memphis": 101,
+  "Texas A&M": 84,
+  "Pittsburgh": 12,
+  "Duke": 2,
+  "California": 59,
+  "Boise State": 112,
+  "Georgia": 68,
+  "West Virginia": 17,
+  "Arizona": 57,
+  "Missouri": 22,
+  "Georgia Tech": 4,
+  "Brigham Young": 88,
+  "Auburn": 75 
 }
 
 var mascots = {
@@ -52,11 +74,33 @@ var mascots = {
   "Tennessee": "Volunteers",
   "Temple": "Owls",
   "USC": "Trojans",
-  "Stanford": "Cardinal"
+  "Stanford": "Cardinal",
+  "Mississippi": "Rebels",
+  "Texas Christian": "Horned Frogs",
+  "Louisiana State": "Tigers",
+  "Southern California": "Trojans",
+  "Wisconsin": "Badgers",
+  "Toledo": "Rockets",
+  "Mississippi State": "Bulldogs",
+  "Ucla": "Bruins",
+  "Washington State": "Cougars",
+  "Memphis": "Tigers",
+  "Texas A&M": "Aggies",
+  "Pittsburgh": "Panthers",
+  "Duke": "Blue Devils",
+  "California": "Golden Bears",
+  "Boise State": "Broncos",
+  "Georgia": "Bulldogs",
+  "West Virginia": "Mountaineers",
+  "Arizona": "Wildcats",
+  "Missouri": "Tigers",
+  "Georgia Tech": "Yellow Jackets",
+  "Brigham Young": "Cougars",
+  "Auburn": "Tigers"
 }
 
 $(document).ready(function(){
-  getLatestRankings("http://34.208.59.48:8000/api/our-rankings/2015/")
+  getLatestRankings("http://34.208.59.48:8000/api/our-rankings/2016/")
 })
 
 function insertTeam(rank, team){
@@ -75,13 +119,41 @@ function insertWeek(week){
 }
 
 function getTeamReference(team){
+  var teamName = resolveTeam(team)
   var link = "http://www.foxsports.com/college-football/"
-  link += team
+  link += teamName
   link += "-"
   link += mascots[team]
   link += "-team"
 
   return link.replace(" ", "-").toLowerCase()
+}
+
+function resolveTeam(team) {
+  var teamAbbr = ""
+  switch (team) {
+    case "Mississippi":
+      teamAbbr = "Ole Miss"
+      break
+    case "Texas Christian":
+      teamAbbr = "TCU"
+      break
+    case "Louisiana State":
+      teamAbbr = "LSU"
+      break
+    case "Southern California":
+      teamAbbr = "USC"
+      break
+    case "Brigham Young":
+      teamAbbr = "BYU"
+      break
+    case "Texas A&M":
+      teamAbbr = "Texas AM"
+      break
+    default:
+      teamAbbr = team
+  }
+  return teamAbbr
 }
 
 function getLatestRankings(url){
