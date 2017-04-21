@@ -146,6 +146,9 @@ function getNextRankings(){
 
 function insertWeek(week){
   var currentWeek = "WEEK " + week.toString()
+  if (week === 14){
+    currentWeek += " (LATEST)"
+  }
   var html = "<div id='week-number'>" + currentWeek + "</div>"
   $("#week-number").append(html).hide().show('slow')
   

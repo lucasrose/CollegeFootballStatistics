@@ -12,11 +12,14 @@
   <nav id="main_bar">
     <ul class="nav nav-tabs">
       <li role="presentation" id="home" class="active"><a href="/">Home</a></li>
-      <li role="presentation" id="network_model"><a href="/network_model">Network Model</a></li>
+      <li role="presentation" id="network_model"><a href="/network_model">Rankings</a></li>
       <li role="presentation" id="teams"><a href="/teams">Teams</a></li>
       <li role="presentation" id="about_us"><a href="/about_us">About Us</a></li>
     </ul>
   </nav>
-  <h1 class="page-title">Welcome</h1>
+  <h1 class="page-title">The Model</h1>
+  <div id="model-description">
+  How can we use college football game data to produce objective rankings? Well, our team developed a model to do exactly just that! The model used is multiple linear regression, which works very similar to a y=mx+b equation, only there are many x-variables (with many m’s too). These x-variables, or predictors, act as the game data, while the y variable is our power ranking index value that we will use for our rankings. Unfortunately, there are unknown coefficients (the b and the multiple m’s), but luckily, machine learning can be used to get these values. All we need is training data, or old data. The y-variables from the training data are historic AP Poll indices, and the x-variables include win percentage, strength of schedule, point spread, and whether a team’s last game was won or not. We did this by a weekly basis. Now, if you give our model future game data, we can give you objective rankings! Pretty cool, right? So here on our site, we are showing you how the rankings would be if we used our model on game data!
+  </div>
   
 </body>

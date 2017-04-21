@@ -14,3 +14,14 @@ h1, h2, h3, h4, h5, h6 {
 body, p, div, .nav, .page-title, .page-content {
     font-family: Abel,Helvetica Neue,Arial,sans-serif;
 }
+
+.page-title {
+  margin-left: .6em;
+  font-size: 4em;
+}
+
+#model-description {
+  font-size: 2em;
+  margin-left: 1.2em;
+  margin-top: 1em;
+}
