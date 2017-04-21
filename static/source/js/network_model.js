@@ -127,7 +127,7 @@ function insertTeam(rank, team, points){
              "</div><div class='team-name'>" + team.toUpperCase() + "</div>" +
              "<div class='team-mascot'>"+ mascots[team].toUpperCase() +"</div>" + 
              "<div class='points'>POINTS: " + points + "</div></a></li>"
-  $("#inner").append(html)
+  $("#inner").append(html).hide().show('slow');
 }
 
 function getNextRankings(){
@@ -147,7 +147,7 @@ function getNextRankings(){
 function insertWeek(week){
   var currentWeek = "WEEK " + week.toString()
   var html = "<div id='week-number'>" + currentWeek + "</div>"
-  $("#week-number").append(html)
+  $("#week-number").append(html).hide().show('slow')
   
 }
 
