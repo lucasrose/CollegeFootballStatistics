@@ -42,9 +42,9 @@ function addKyle(){
 function addGrant(){
   var name = "Grant Hughes"
   var major = "COMPUTER SCIENCE"
-  var linkedInUrl = ""
+  var linkedInUrl = "https://www.linkedin.com/in/grant-hughes-0430398a"
   var gitHubUrl = ""
-  var bio = "Insert Bio Here"
+  var bio = "Grant is an incoming employee at Unitedhealth Group in Raleigh, NC. He is working to pursue a career in Software Development and Data Science. He likes to exercise, travel, and learn history for fun!"
   
   createPerson(name, major, bio, linkedInUrl, gitHubUrl)
 }
