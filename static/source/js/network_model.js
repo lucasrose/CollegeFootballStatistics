@@ -99,23 +99,56 @@ var mascots = {
   "Auburn": "Tigers"
 }
 
+var weekToJSONMap = {
+  "3": "0",
+  "4": "1",
+  "5": "2",
+  "6": "3",
+  "7": "4",
+  "8": "5",
+  "9": "6",
+  "10": "7",
+  "11": "8",
+  "12": "9",
+  "13": "10",
+  "14": "11"
+}
+
+var latestRankingEndpoint = "http://34.208.59.48:8000/api/our-rankings/2016/"
+
 $(document).ready(function(){
-  getLatestRankings("http://34.208.59.48:8000/api/our-rankings/2016/")
+  getLatestRankings(latestRankingEndpoint, "11")
 })
 
-function insertTeam(rank, team){
+function insertTeam(rank, team, points){
   var html = "<li class='team'><div class='rank'>" + rank +"</div><a href='" + getTeamReference(team) + 
              "'><div class='team-logo'>" +
              "<img src='http://b.fssta.com/uploads/content/dam/fsdigital/fscom/global/dev/static_resources/ncaaf/teams/retina/" + images[team].toString() + ".png'/>" + 
              "</div><div class='team-name'>" + team.toUpperCase() + "</div>" +
-             "<div class='team-mascot'>"+ mascots[team].toUpperCase() +"</div></a></li>"
+             "<div class='team-mascot'>"+ mascots[team].toUpperCase() +"</div>" + 
+             "<div class='points'>POINTS: " + points + "</div></a></li>"
   $("#inner").append(html)
+}
+
+function getNextRankings(){
+  var nextWeekJSONValue
+  var weekString =$('#week-number').text()
+  var currentWeek = parseInt(weekString.replace(/[^0-9]/g, ''))
+  if (currentWeek === 14){
+    nextWeekJSONValue = "0"
+  }
+  else{
+    currentWeek += 1
+    nextWeekJSONValue = weekToJSONMap[currentWeek]
+  }
+  updateRankings(latestRankingEndpoint, nextWeekJSONValue)
 }
 
 function insertWeek(week){
   var currentWeek = "WEEK " + week.toString()
   var html = "<div id='week-number'>" + currentWeek + "</div>"
   $("#week-number").append(html)
+  
 }
 
 function getTeamReference(team){
@@ -156,20 +189,20 @@ function resolveTeam(team) {
   return teamAbbr
 }
 
-function getLatestRankings(url){
-  loadFile(url, getResults)
+function getLatestRankings(url, week){
+  loadFile(url, getResults, week)
 }
 
-function updateRankings(url){
+function updateRankings(url, week){
   $("#inner").empty()
   $("#week-number").empty()
-  getLatestRankings(url)
+  getLatestRankings(url, week)
 }
 
-function getResults(){
+function getResults(week){
   var json = this.response
   
-  parseResults(json["0"])
+  parseResults(json[week])
 }
 
 function parseResults(data){
@@ -182,7 +215,10 @@ function parseResults(data){
   for (var i = 1; i <= 25; i++){
     var rank = i.toString()
     var teamData = rankings[rank]
-    insertTeam(i, teamData["college"])
+    var college = teamData["college"]
+    var points = teamData["points"]
+    
+    insertTeam(i, college, points)
   }
 }
 
