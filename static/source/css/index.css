@@ -23,5 +23,6 @@ body, p, div, .nav, .page-title, .page-content {
 #model-description {
   font-size: 2em;
   margin-left: 1.2em;
+  margin-right: 1.2em;
   margin-top: 1em;
 }
