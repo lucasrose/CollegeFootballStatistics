@@ -34,3 +34,12 @@ body, p, div, .nav, .page-title, .page-sub-header, .page-content{
   margin-left: 1.5em;
   padding-top: 1em;
 }
+
+.linkedin-link, .github-link {
+  display: inline-block;
+  float: right;
+  color: black;
+  padding-right: 2em;
+  font-size: .8em;
+}
+
