@@ -28,6 +28,6 @@ app.get('/about_us', function (req, res, next) {
 })
 
 
-app.listen(process.env.PORT || 3000, function () {
-  console.log('Listening on http://localhost:' + (process.env.PORT || 3000))
+app.listen(process.env.PORT || 8080, function () {
+  console.log('Listening on http://localhost:' + (process.env.PORT || 8080))
 })
