@@ -6,11 +6,10 @@ var express = require('express')
 app.use(logger('dev'))
 app.use(express.static(__dirname + '/static'))
 
-app.use(function(req, res, next) {
-  req.header("Access-Control-Allow-Origin", "*");
-  req.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+//app.use(function (req, res, next) {
+//  console.log("/" + req.method);
+//  next();
+//});
 
 app.get('/', function (req, res, next) {
   res.sendFile(path + "index.html")
