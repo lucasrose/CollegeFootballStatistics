@@ -5,7 +5,7 @@ var images = {
   "Michigan State": 30,
   "Oklahoma": 24,
   "Iowa": 28,
-  "Ohio State": 19,
+  "Ohio State": 33,
   "Notre Dame": 104,
   "Florida State": 3,
   "North Carolina": 6,
